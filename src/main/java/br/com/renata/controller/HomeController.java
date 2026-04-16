@@ -6,8 +6,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    @GetMapping("/")
-    public String home() {
-        return "API DivulgaMais está rodando!";
-    }
+	@GetMapping("/")
+	public String home() {
+		return "Projeto Divulga Mais rodando com sucesso! API disponível em /servicos, /avaliacoes e /contatos";
+
+	}
 }
