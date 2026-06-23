@@ -1,5 +1,7 @@
 # 🚀 Divulga Mais
 
+🌐 **Acesso ao Projeto em Produção:** [divulga-mais-production.up.railway.app](https://divulga-mais-production.up.railway.app)
+
 Sistema web desenvolvido em **Java com Spring MVC**, criado para divulgar serviços profissionais na internet por meio de uma plataforma moderna, intuitiva e responsiva.
 
 O sistema permite que visitantes conheçam os serviços oferecidos, visualizem informações detalhadas, enviem mensagens de contato e registrem avaliações. Já a área administrativa oferece ferramentas completas para gerenciamento do conteúdo do site, proporcionando praticidade na administração dos serviços e no relacionamento com os clientes.
@@ -10,7 +12,7 @@ O sistema permite que visitantes conheçam os serviços oferecidos, visualizem i
 
 ## 👥 Área Pública
 
-A área pública foi desenvolvida para proporcionar uma experiência agradável aos visitantes.
+A área pública foi desenvolvida para proporcionar uma experiência agradável e interativa aos visitantes.
 
 ### Página Inicial
 
@@ -20,7 +22,7 @@ A área pública foi desenvolvida para proporcionar uma experiência agradável 
 * Seção "Por que nos escolher?"
 * Contadores animados de resultados
 * Exibição dos serviços cadastrados
-* Página exclusiva com detalhes completos dos serviços
+* Assistente Virtual (Chatbot IA): Interface interativa flutuante para engajamento do usuário, simulando um atendimento para tirar dúvidas rápidas
 * Avaliações dos clientes
 * Formulário para envio de avaliações com sistema de 1 a 5 estrelas
 * Perguntas frequentes (FAQ) com respostas expansíveis
@@ -31,19 +33,15 @@ A área pública foi desenvolvida para proporcionar uma experiência agradável 
 
 ### Página de Serviços
 
-* Botão **"Veja mais sobre os serviços"**, que direciona para uma página contendo informações detalhadas sobre cada serviço.
-* Exibição dos serviços cadastrados
-* Fotos personalizadas através de URL
-* Nome do serviço
-* Descrição
-* Valor formatado em Real
+* Botão "Veja mais sobre os serviços", que direciona para uma página contendo informações detalhadas sobre cada serviço
+* Exibição dos serviços cadastrados com fotos personalizadas através de URL, nome, descrição e valor formatado
+* Assistente Virtual (Chatbot IA): Integrado também à página de serviços para auxiliar o cliente na escolha do melhor plano
 
 ### Avaliações
 
 Os visitantes podem:
 
-* Informar nome
-* Informar telefone
+* Informar nome e telefone
 * Atribuir nota de 1 a 5 estrelas
 * Escrever comentários
 
@@ -68,23 +66,16 @@ A área administrativa concentra todas as funcionalidades de gerenciamento do si
 
 O administrador pode:
 
-* Cadastrar novos serviços
-* Informar nome
-* Descrição
-* Valor
-* URL da imagem
+* Cadastrar novos serviços (nome, descrição, valor e URL da imagem)
 * Consultar todos os serviços cadastrados
 * Editar qualquer informação do serviço
-* Alterar a foto do serviço
 * Excluir serviços
 
 ---
 
 ## Gerenciamento de Mensagens
 
-Todas as mensagens enviadas pelo formulário de contato ficam registradas no sistema.
-
-O administrador pode:
+Todas as mensagens enviadas pelo formulário de contato ficam registradas no sistema. O administrador pode:
 
 * Visualizar todas as mensagens
 * Identificar mensagens pendentes
@@ -98,15 +89,13 @@ O administrador pode:
 O administrador possui uma tela exclusiva para:
 
 * Consultar todas as avaliações recebidas
-* Visualizar nome do cliente
-* Nota atribuída
-* Comentário enviado
+* Visualizar nome do cliente, nota atribuída e comentário enviado
 
 ---
 
 # 🌙 Modo Escuro
 
-Todo o sistema conta com suporte ao **Dark Mode**, permitindo alternar entre o tema claro e o tema escuro por meio de um botão disponível na interface.
+Todo o sistema conta com suporte ao **Dark Mode**, permitindo alternar entre o tema claro e o tema escuro por meio de um botão fixo na interface, armazenando a preferência do usuário.
 
 ---
 
@@ -114,55 +103,45 @@ Todo o sistema conta com suporte ao **Dark Mode**, permitindo alternar entre o t
 
 O projeto foi desenvolvido priorizando uma interface moderna e organizada, contendo:
 
-* Layout responsivo
-* Cards para exibição dos serviços
-* Ícones ilustrativos
-* Botões interativos
-* Navegação intuitiva
+* Layout responsivo (Mobile First)
 * Componentização utilizando JSP Include (Navbar e Footer)
+* Cards interativos com efeitos de hover
+* Uso intenso de Flexbox e CSS Grid
+* Ícones vetoriais (FontAwesome)
 
 ---
 
 # 🛠 Tecnologias Utilizadas
 
-* Java
-* Spring MVC
-* JSP
-* JSTL
-* HTML5
-* CSS3
-* JavaScript
-* PostgreSQL
-* JDBC
-* Maven
-* Apache Tomcat
-* Lombok
+* **Backend:** Java, Spring MVC
+* **Frontend:** JSP, JSTL, HTML5, CSS3, JavaScript
+* **Banco de Dados:** PostgreSQL, JDBC
+* **Infraestrutura:** Maven, Apache Tomcat
+* **Utilitários:** Lombok
+* **Deploy:** Railway
 
 ---
 
-
 # 💾 Banco de Dados
 
-O sistema utiliza o **PostgreSQL** como banco de dados.
+O sistema utiliza o **PostgreSQL** como banco de dados. Principais tabelas:
 
-Principais tabelas:
-
-* Usuário
-* Serviço
-* Contato
-* Avaliação
+* `usuario` (Acesso administrativo)
+* `servico` (Catálogo de ofertas)
+* `contato` (Mensagens recebidas)
+* `avaliacao` (Feedback dos clientes)
 
 ---
 
 # 📚 Arquitetura
 
-O projeto foi desenvolvido seguindo o padrão **MVC (Model-View-Controller)**, promovendo separação entre regras de negócio, acesso aos dados e interface com o usuário.
+O projeto foi desenvolvido seguindo o padrão MVC (Model-View-Controller), promovendo forte separação entre regras de negócio, acesso aos dados (DAO) e interface com o usuário (Views/JSP).
 
 ---
 
 # 🎯 Objetivo
 
-Desenvolver uma aplicação web completa para divulgação de serviços profissionais, aplicando os conceitos de desenvolvimento Java Web, arquitetura MVC, persistência de dados com PostgreSQL e boas práticas de organização de código.
+Desenvolver uma aplicação web completa para divulgação de serviços profissionais, aplicando de ponta a ponta os conceitos de desenvolvimento Java Web, arquitetura MVC, persistência de dados com PostgreSQL, criação de interfaces modernas com CSS avançado e deploy em nuvem.
 
 ---
 
